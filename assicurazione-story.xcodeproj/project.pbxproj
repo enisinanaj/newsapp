@@ -13,6 +13,11 @@
 		5F8D766F1F3290E200265A9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F8D766E1F3290E200265A9B /* Assets.xcassets */; };
 		5F8D76721F3290E200265A9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F8D76701F3290E200265A9B /* LaunchScreen.storyboard */; };
 		5F8D767D1F3290E200265A9B /* assicurazione_storyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8D767C1F3290E200265A9B /* assicurazione_storyTests.swift */; };
+		5F9306881F3FCE9900446B40 /* RSSReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9306871F3FCE9900446B40 /* RSSReader.swift */; };
+		5FF3569B1F3FA128009E68C7 /* LatestNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF3569A1F3FA128009E68C7 /* LatestNewsViewController.swift */; };
+		5FF356A01F3FB78C009E68C7 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF3569F1F3FB78C009E68C7 /* NewsTableViewCell.swift */; };
+		69E354369C430638F01B263F /* Pods_assicurazione_storyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF44A5619C898627EB55FF6 /* Pods_assicurazione_storyTests.framework */; };
+		9B5674BF01585DAF75C15CC7 /* Pods_assicurazione_story.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E83B4A2081490727F61A18 /* Pods_assicurazione_story.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2EF44A5619C898627EB55FF6 /* Pods_assicurazione_storyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_assicurazione_storyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32BEE30D684795ED248B8D65 /* Pods-assicurazione-storyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-assicurazione-storyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-assicurazione-storyTests/Pods-assicurazione-storyTests.release.xcconfig"; sourceTree = "<group>"; };
+		37E83B4A2081490727F61A18 /* Pods_assicurazione_story.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_assicurazione_story.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8D76641F3290E200265A9B /* assicurazione-story.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "assicurazione-story.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8D76671F3290E200265A9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F8D76691F3290E200265A9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +44,13 @@
 		5F8D76781F3290E200265A9B /* assicurazione-storyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "assicurazione-storyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8D767C1F3290E200265A9B /* assicurazione_storyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = assicurazione_storyTests.swift; sourceTree = "<group>"; };
 		5F8D767E1F3290E200265A9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F9306871F3FCE9900446B40 /* RSSReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSReader.swift; sourceTree = "<group>"; };
+		5FF3569A1F3FA128009E68C7 /* LatestNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsViewController.swift; sourceTree = "<group>"; };
+		5FF3569C1F3FA1A8009E68C7 /* assicurazione-story.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "assicurazione-story.entitlements"; sourceTree = "<group>"; };
+		5FF3569F1F3FB78C009E68C7 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		BFEF99F327FF4B21366C8CAB /* Pods-assicurazione-story.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-assicurazione-story.debug.xcconfig"; path = "Pods/Target Support Files/Pods-assicurazione-story/Pods-assicurazione-story.debug.xcconfig"; sourceTree = "<group>"; };
+		D07667D758807225EFCBD62B /* Pods-assicurazione-storyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-assicurazione-storyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-assicurazione-storyTests/Pods-assicurazione-storyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DD9A49FDE17FDE2DD83EB06C /* Pods-assicurazione-story.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-assicurazione-story.release.xcconfig"; path = "Pods/Target Support Files/Pods-assicurazione-story/Pods-assicurazione-story.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B5674BF01585DAF75C15CC7 /* Pods_assicurazione_story.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69E354369C430638F01B263F /* Pods_assicurazione_storyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +79,8 @@
 				5F8D76661F3290E200265A9B /* assicurazione-story */,
 				5F8D767B1F3290E200265A9B /* assicurazione-storyTests */,
 				5F8D76651F3290E200265A9B /* Products */,
+				A7B57C4C140C74B1F1567503 /* Pods */,
+				93ECDE685E96B866FF095566 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +96,16 @@
 		5F8D76661F3290E200265A9B /* assicurazione-story */ = {
 			isa = PBXGroup;
 			children = (
+				5FF3569C1F3FA1A8009E68C7 /* assicurazione-story.entitlements */,
 				5F8D76671F3290E200265A9B /* AppDelegate.swift */,
 				5F8D76691F3290E200265A9B /* ViewController.swift */,
 				5F8D766B1F3290E200265A9B /* Main.storyboard */,
 				5F8D766E1F3290E200265A9B /* Assets.xcassets */,
 				5F8D76701F3290E200265A9B /* LaunchScreen.storyboard */,
 				5F8D76731F3290E200265A9B /* Info.plist */,
+				5FF3569A1F3FA128009E68C7 /* LatestNewsViewController.swift */,
+				5FF3569F1F3FB78C009E68C7 /* NewsTableViewCell.swift */,
+				5F9306871F3FCE9900446B40 /* RSSReader.swift */,
 			);
 			path = "assicurazione-story";
 			sourceTree = "<group>";
@@ -96,6 +119,26 @@
 			path = "assicurazione-storyTests";
 			sourceTree = "<group>";
 		};
+		93ECDE685E96B866FF095566 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37E83B4A2081490727F61A18 /* Pods_assicurazione_story.framework */,
+				2EF44A5619C898627EB55FF6 /* Pods_assicurazione_storyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7B57C4C140C74B1F1567503 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BFEF99F327FF4B21366C8CAB /* Pods-assicurazione-story.debug.xcconfig */,
+				DD9A49FDE17FDE2DD83EB06C /* Pods-assicurazione-story.release.xcconfig */,
+				D07667D758807225EFCBD62B /* Pods-assicurazione-storyTests.debug.xcconfig */,
+				32BEE30D684795ED248B8D65 /* Pods-assicurazione-storyTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +146,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F8D76811F3290E200265A9B /* Build configuration list for PBXNativeTarget "assicurazione-story" */;
 			buildPhases = (
+				49D386FA5301A2ADF74D2F33 /* [CP] Check Pods Manifest.lock */,
 				5F8D76601F3290E200265A9B /* Sources */,
 				5F8D76611F3290E200265A9B /* Frameworks */,
 				5F8D76621F3290E200265A9B /* Resources */,
+				C606282C41A5E62D527BA35E /* [CP] Embed Pods Frameworks */,
+				6681BA86E5C617E757462D89 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +166,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F8D76841F3290E200265A9B /* Build configuration list for PBXNativeTarget "assicurazione-storyTests" */;
 			buildPhases = (
+				05255B290889FFA3F64EFDF3 /* [CP] Check Pods Manifest.lock */,
 				5F8D76741F3290E200265A9B /* Sources */,
 				5F8D76751F3290E200265A9B /* Frameworks */,
 				5F8D76761F3290E200265A9B /* Resources */,
+				8A29CE210FE04DB265ED1EC4 /* [CP] Embed Pods Frameworks */,
+				82F8273481E278576746E371 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,6 +195,11 @@
 				TargetAttributes = {
 					5F8D76631F3290E200265A9B = {
 						CreatedOnToolsVersion = 9.0;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					5F8D76771F3290E200265A9B = {
 						CreatedOnToolsVersion = 9.0;
@@ -192,12 +246,119 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		05255B290889FFA3F64EFDF3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-assicurazione-storyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49D386FA5301A2ADF74D2F33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-assicurazione-story-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6681BA86E5C617E757462D89 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-assicurazione-story/Pods-assicurazione-story-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82F8273481E278576746E371 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-assicurazione-storyTests/Pods-assicurazione-storyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A29CE210FE04DB265ED1EC4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-assicurazione-storyTests/Pods-assicurazione-storyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C606282C41A5E62D527BA35E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-assicurazione-story/Pods-assicurazione-story-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireRSSParser/AlamofireRSSParser.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireRSSParser.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-assicurazione-story/Pods-assicurazione-story-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5F8D76601F3290E200265A9B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5F8D766A1F3290E200265A9B /* ViewController.swift in Sources */,
+				5FF3569B1F3FA128009E68C7 /* LatestNewsViewController.swift in Sources */,
+				5F9306881F3FCE9900446B40 /* RSSReader.swift in Sources */,
+				5FF356A01F3FB78C009E68C7 /* NewsTableViewCell.swift in Sources */,
 				5F8D76681F3290E200265A9B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,10 +510,13 @@
 		};
 		5F8D76821F3290E200265A9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFEF99F327FF4B21366C8CAB /* Pods-assicurazione-story.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "assicurazione-story/assicurazione-story.entitlements";
 				DEVELOPMENT_TEAM = 6M95A8XHH3;
 				INFOPLIST_FILE = "assicurazione-story/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.newlinecode.assicurazione-story";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -363,10 +527,13 @@
 		};
 		5F8D76831F3290E200265A9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD9A49FDE17FDE2DD83EB06C /* Pods-assicurazione-story.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "assicurazione-story/assicurazione-story.entitlements";
 				DEVELOPMENT_TEAM = 6M95A8XHH3;
 				INFOPLIST_FILE = "assicurazione-story/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.newlinecode.assicurazione-story";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -377,6 +544,7 @@
 		};
 		5F8D76851F3290E200265A9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D07667D758807225EFCBD62B /* Pods-assicurazione-storyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -393,6 +561,7 @@
 		};
 		5F8D76861F3290E200265A9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32BEE30D684795ED248B8D65 /* Pods-assicurazione-storyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

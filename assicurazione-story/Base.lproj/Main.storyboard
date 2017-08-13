@@ -1,24 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XcX-tp-MTS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="jhT-8P-OLH">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="8bC-Xf-vdC">
+                <navigationController id="XcX-tp-MTS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="V0t-IJ-f6u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6Ez-9i-rlr" kind="relationship" relationship="rootViewController" id="fl4-RA-ZAn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dyf-hZ-OJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124" y="740"/>
+        </scene>
+        <!--ULTIME NOTIZIE-->
+        <scene sceneID="ezX-AJ-EIJ">
+            <objects>
+                <viewController id="6Ez-9i-rlr" customClass="LatestNewsViewController" customModule="assicurazione_story" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EiO-Ks-XtO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" separatorInsetReference="fromAutomaticInsets" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jCz-bc-SG8">
+                                <rect key="frame" x="0.0" y="64" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="newsRow" rowHeight="262" id="5Sg-qd-fSS" customClass="NewsTableViewCell" customModule="assicurazione_story" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="262"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Sg-qd-fSS" id="opG-8A-WL7">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="261.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="newsDate" text="Yesterday, 16 June" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMJ-F3-02e" userLabel="CellNewsDate">
+                                                    <rect key="frame" x="10" y="10" width="355" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="jyZ-Sv-DnN"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.56169041450777202" green="0.56169041450777202" blue="0.56169041450777202" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="newsTitle" text="Opzioni Binarie e regolamenti internazionali: facciamo chiarezza" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0s-3R-1bc" userLabel="CellNewsTitle">
+                                                    <rect key="frame" x="10" y="46" width="355" height="31.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="newsExcerpt" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Det-nl-NdP" userLabel="CellNewsExcerpt">
+                                                    <rect key="frame" x="10" y="87.5" width="355" height="72"/>
+                                                    <string key="text">Il mondo delle opzioni binarie si configura talvolta come una giungla di broker, portali, notizie contrastanti e ambigue. Di chi ci si può fidare? Quali broker sono più affidabili?</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="newsReadMore" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKo-Z0-5DY" userLabel="CellNewsReadMore">
+                                                    <rect key="frame" x="10" y="169.5" width="62" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="62" id="fgy-4x-2VN"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Continua">
+                                                        <color key="titleColor" red="0.74052784974093266" green="0.052746795136486807" blue="0.039405964046160549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pMJ-F3-02e" firstAttribute="top" secondItem="opG-8A-WL7" secondAttribute="top" constant="10" id="HAb-Cy-DlY"/>
+                                                <constraint firstAttribute="trailing" secondItem="r0s-3R-1bc" secondAttribute="trailing" constant="10" id="Kny-eG-mnj"/>
+                                                <constraint firstItem="pMJ-F3-02e" firstAttribute="leading" secondItem="opG-8A-WL7" secondAttribute="leading" constant="10" id="MUe-uq-X26"/>
+                                                <constraint firstItem="rKo-Z0-5DY" firstAttribute="top" secondItem="Det-nl-NdP" secondAttribute="bottom" constant="10" id="TIe-Gn-UVG"/>
+                                                <constraint firstItem="rKo-Z0-5DY" firstAttribute="leading" secondItem="opG-8A-WL7" secondAttribute="leading" constant="10" id="dsm-1T-tBQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="pMJ-F3-02e" secondAttribute="trailing" constant="10" id="gWJ-bn-wVX"/>
+                                                <constraint firstItem="Det-nl-NdP" firstAttribute="top" secondItem="r0s-3R-1bc" secondAttribute="bottom" constant="10" id="igj-KK-Hsd"/>
+                                                <constraint firstItem="r0s-3R-1bc" firstAttribute="leading" secondItem="opG-8A-WL7" secondAttribute="leading" constant="10" id="lG0-ln-ZEo"/>
+                                                <constraint firstItem="Det-nl-NdP" firstAttribute="leading" secondItem="opG-8A-WL7" secondAttribute="leading" constant="10" id="lTS-M3-DEz"/>
+                                                <constraint firstItem="r0s-3R-1bc" firstAttribute="top" secondItem="pMJ-F3-02e" secondAttribute="bottom" constant="15" id="syB-l9-B1A"/>
+                                                <constraint firstAttribute="trailing" secondItem="Det-nl-NdP" secondAttribute="trailing" constant="10" id="tUt-80-Zwm"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="newsDate" destination="pMJ-F3-02e" id="8Mh-mX-LKv"/>
+                                            <outlet property="newsExcerpt" destination="Det-nl-NdP" id="oRA-tQ-0gF"/>
+                                            <outlet property="newsReadMore" destination="rKo-Z0-5DY" id="diS-kY-Ai4"/>
+                                            <outlet property="newsTitle" destination="r0s-3R-1bc" id="dxd-ME-6dZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="6Ez-9i-rlr" id="iIb-gd-akF"/>
+                                    <outlet property="delegate" destination="6Ez-9i-rlr" id="gef-eG-7iR"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jCz-bc-SG8" firstAttribute="top" secondItem="Oxr-7C-JaJ" secondAttribute="top" id="3Qz-e8-ztY"/>
+                            <constraint firstItem="jCz-bc-SG8" firstAttribute="leading" secondItem="Oxr-7C-JaJ" secondAttribute="leading" id="Mjb-ph-Icw"/>
+                            <constraint firstItem="Oxr-7C-JaJ" firstAttribute="trailing" secondItem="jCz-bc-SG8" secondAttribute="trailing" id="aai-th-IOe"/>
+                            <constraint firstItem="jCz-bc-SG8" firstAttribute="width" secondItem="EiO-Ks-XtO" secondAttribute="width" id="e8U-ag-S36"/>
+                            <constraint firstItem="jCz-bc-SG8" firstAttribute="bottom" secondItem="Oxr-7C-JaJ" secondAttribute="bottom" constant="64" id="mMa-hB-0D1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Oxr-7C-JaJ"/>
                     </view>
+                    <navigationItem key="navigationItem" title="ULTIME NOTIZIE" id="DlM-qm-aYa"/>
+                    <connections>
+                        <outlet property="tableView" destination="jCz-bc-SG8" id="ILe-9i-GZa"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fz9-Po-lAC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="951.20000000000005" y="737.18140929535241"/>
         </scene>
     </scenes>
 </document>

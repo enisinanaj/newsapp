@@ -1,0 +1,6 @@
+framework module Pods_assicurazione_storyTests {
+  umbrella header "Pods-assicurazione-storyTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
