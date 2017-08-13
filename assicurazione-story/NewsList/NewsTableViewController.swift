@@ -10,10 +10,11 @@ import Foundation
 import UIKit
 import AlamofireRSSParser
 
-class LatestNewsViewController : UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NewsTableViewController : UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     var rssItems: [RSSItem]?
+    var rssFeed: RSSFeed?
     
     override func viewDidLoad() {
         self.tableView.rowHeight = UITableViewAutomaticDimension
@@ -25,6 +26,7 @@ class LatestNewsViewController : UIViewController, UITableViewDelegate, UITableV
     func loadRSSFromMondoAssicurazione() {
         RSSParser.getRSSFeedResponse(path: "https://www.postonline.co.uk/feeds/rss/category/europe/italy") { (rssFeed: RSSFeed?, status: NetworkResponseStatus) in
             print(rssFeed ?? "null") // it will be nil if status == .error
+            self.rssFeed = rssFeed
             self.rssItems = rssFeed?.items
             
             self.reloadTableViewData()
@@ -63,20 +65,20 @@ class LatestNewsViewController : UIViewController, UITableViewDelegate, UITableV
         dateFormatter.dateFormat = "dd/MM/YYYY @ HH:mm"
         
         tableViewCell.newsDate?.text = dateFormatter.string(from: (rssItem.pubDate)!)
-        tableViewCell.newsSource?.text = rssItem.source
+        tableViewCell.newsSource?.text = rssFeed?.title
         
         tableViewCell.newsTitle?.text = rssItem.title
         tableViewCell.newsTitle.sizeToFit()
         
         tableViewCell.newsExcerpt?.text = rssItem.itemDescription
         
-        if rssItem.mediaThumbnail != nil {
-            if let imageUrl = NSURL(string: rssItem.mediaThumbnail!) {
-                if let data = NSData(contentsOf: imageUrl as URL) {
-                    tableViewCell.newsIcon.image = UIImage(data: data as Data)
-                }
-            }
-        }
+//        if rssItem.mediaThumbnail != nil {
+//            if let imageUrl = NSURL(string: rssItem.mediaThumbnail!) {
+//                if let data = NSData(contentsOf: imageUrl as URL) {
+//                    tableViewCell.newsIcon.image = UIImage(data: data as Data)
+//                }
+//            }
+//        }
         
         tableViewCell.sizeToFit()
         

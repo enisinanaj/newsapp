@@ -15,6 +15,5 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var newsTitle: UILabel!
     @IBOutlet weak var newsExcerpt: UILabel!
     @IBOutlet weak var newsReadMore: UIButton!
-    @IBOutlet weak var newsIcon: UIImageView!
     
 }
