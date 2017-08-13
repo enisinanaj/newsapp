@@ -23,6 +23,6 @@ class Generali: CommonNewsSourceProtocol {
     }
     
     override func getNewsSourceTitle() -> String {
-        return "GENERALI - Comunicati stampa";
+        return "GENERALI - COMUNICATI STAMPA";
     }
 }

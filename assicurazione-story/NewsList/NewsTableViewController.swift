@@ -19,24 +19,29 @@ class NewsTableViewController : UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 255
-        
-        loadRSSFromMondoAssicurazione()
-    }
-    
-    func loadRSSFromMondoAssicurazione() {
-        RSSParser.getRSSFeedResponse(path: "https://www.postonline.co.uk/feeds/rss/category/europe/italy") { (rssFeed: RSSFeed?, status: NetworkResponseStatus) in
-            print(rssFeed ?? "null") // it will be nil if status == .error
-            self.rssFeed = rssFeed
-            self.rssItems = rssFeed?.items
-            
-            self.reloadTableViewData()
-        }
     }
     
     func reloadTableViewData() {
+        self.tableView.beginUpdates()
+        
         for (index, _) in (rssItems?.enumerated())! {
             let indexPath = NSIndexPath(row: index, section: 0)
-            self.tableView.reloadRows(at: [indexPath as IndexPath], with: UITableViewRowAnimation.bottom)
+            self.tableView.insertRows(at: [indexPath as IndexPath], with: UITableViewRowAnimation.bottom)
+        }
+        
+        self.tableView.endUpdates()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailView" {
+            let nextScene = segue.destination as! NewsDetailViewController
+            
+            if let usender:Any = sender {
+                if let button = usender as? NewsReadMoreButton {
+                    nextScene.rssItem = button.rssItem
+                    nextScene.sourceTitle = rssFeed?.title
+                }
+            }
         }
     }
     
@@ -46,7 +51,7 @@ class NewsTableViewController : UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (self.rssItems == nil) {
-            return 50
+            return 0
         }
         
         return (self.rssItems?.count)!
@@ -55,7 +60,7 @@ class NewsTableViewController : UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tableViewCell : NewsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "newsRow", for: indexPath) as! NewsTableViewCell
         
-        if rssItems == nil {
+        if rssItems == nil || indexPath.row > (rssItems?.count)! {
             return tableViewCell
         }
         
@@ -63,22 +68,14 @@ class NewsTableViewController : UIViewController, UITableViewDelegate, UITableVi
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/YYYY @ HH:mm"
-        
         tableViewCell.newsDate?.text = dateFormatter.string(from: (rssItem.pubDate)!)
-        tableViewCell.newsSource?.text = rssFeed?.title
         
+        tableViewCell.newsSource?.text = rssFeed?.title
         tableViewCell.newsTitle?.text = rssItem.title
         tableViewCell.newsTitle.sizeToFit()
+        tableViewCell.newsReadMore.rssItem = rssItem
         
-        tableViewCell.newsExcerpt?.text = rssItem.itemDescription
-        
-//        if rssItem.mediaThumbnail != nil {
-//            if let imageUrl = NSURL(string: rssItem.mediaThumbnail!) {
-//                if let data = NSData(contentsOf: imageUrl as URL) {
-//                    tableViewCell.newsIcon.image = UIImage(data: data as Data)
-//                }
-//            }
-//        }
+        tableViewCell.newsExcerpt?.text = rssItem.itemDescription?.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
         
         tableViewCell.sizeToFit()
         

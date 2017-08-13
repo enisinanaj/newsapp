@@ -1,5 +1,5 @@
 //
-//  MondoAssicurazioni.swift
+//  Finanza.swift
 //  assicurazione-story
 //
 //  Created by Eni Sinanaj on 13/08/2017.
@@ -8,21 +8,22 @@
 
 import AlamofireRSSParser
 
-class MondoAssicurazioni: CommonNewsSourceProtocol {
+class FinanzaCom: CommonNewsSourceProtocol {
     
     override func getNewsElements() -> [RSSItem] {
         return self.rssFeed!.items
     }
     
     override func getNewsSource() -> String {
-        return "https://feeds.feedburner.com/mondo-assicurazioni?format=xml"
+        return "https://www.finanza.com/rssfeed/"
     }
     
     override func getBackgroundImageUrl() -> String {
-        return "https://c1.staticflickr.com/1/572/33165940281_16d24ef49e_n.jpg"
+        return "https://c1.staticflickr.com/5/4229/35854436835_1b653c198c_n.jpg"
     }
     
     override func getNewsSourceTitle() -> String {
-        return "MONDO ASSICURAZIONI";
+        return "FINANZA.COM";
     }
 }
+

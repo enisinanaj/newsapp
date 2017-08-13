@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -69,18 +69,18 @@
 
 /* Begin PBXFileReference section */
 		0773C4EED8E65C5E09EAC06D3F10C146 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
-		0BB2BBB758AC1FC3D18770683E9C0327 /* Pods_assicurazione_storyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_assicurazione_storyTests.framework; path = "Pods-assicurazione-storyTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BB2BBB758AC1FC3D18770683E9C0327 /* Pods_assicurazione_storyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_assicurazione_storyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D0533E4EC2277AAAC8888328EC5A64B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		0E126206AA4DD6643D9C2D985775B418 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
 		11D16728E2C5FCFC064C417200B82D10 /* Pods-assicurazione-storyTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-assicurazione-storyTests-frameworks.sh"; sourceTree = "<group>"; };
 		1C3D93A9BD42F5E264EC12F7BFB5610F /* Pods-assicurazione-story.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-assicurazione-story.debug.xcconfig"; sourceTree = "<group>"; };
 		1DA71D56A4590870D987BE5DE1DDF4D1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1EA4BC14C971B2E323F130125B052AE5 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1EA9F06AE1FE387476555C4E66E0FAD9 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		1EA4BC14C971B2E323F130125B052AE5 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EA9F06AE1FE387476555C4E66E0FAD9 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		22F2A7977BCFB19CAEAE3343BDF106D2 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
 		2374FF331002CDF5AFA42DAA217CE3C5 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		2DC82E3A5A08F84D97923E0F21C2E9F3 /* Pods-assicurazione-story-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-assicurazione-story-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2EEFB0F9D42E75E40F075C4F23C88C04 /* Pods-assicurazione-story.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-assicurazione-story.modulemap"; sourceTree = "<group>"; };
+		2EEFB0F9D42E75E40F075C4F23C88C04 /* Pods-assicurazione-story.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-assicurazione-story.modulemap"; sourceTree = "<group>"; };
 		353781E0EAB1765BB83B90D6CD04174B /* AlamofireRSSParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AlamofireRSSParser.h; path = Pod/Classes/AlamofireRSSParser.h; sourceTree = "<group>"; };
 		3789317FEEB96FD22F7D0AAC073AB5C1 /* Pods-assicurazione-storyTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-assicurazione-storyTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		393EECE2CF1345806DA40BF9E71152AD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,19 +99,19 @@
 		6B115BD8EC618CEE3ECF4724F4EE956D /* Pods-assicurazione-story-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-assicurazione-story-frameworks.sh"; sourceTree = "<group>"; };
 		6CBFE8F4185342A091DDF68476F96F34 /* AlamofireRSSParser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlamofireRSSParser-prefix.pch"; sourceTree = "<group>"; };
 		706C7AFFE37BA158C3553250F4B5FAED /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		76773A4131AE10875FCB655D844A6908 /* Pods-assicurazione-storyTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-assicurazione-storyTests.modulemap"; sourceTree = "<group>"; };
-		7746F01BACE3FDACA8E0D89F0DF99D2E /* AlamofireRSSParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AlamofireRSSParser.framework; path = AlamofireRSSParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76773A4131AE10875FCB655D844A6908 /* Pods-assicurazione-storyTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-assicurazione-storyTests.modulemap"; sourceTree = "<group>"; };
+		7746F01BACE3FDACA8E0D89F0DF99D2E /* AlamofireRSSParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlamofireRSSParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5D6C447778522EC3A17703637EAFD1 /* Pods-assicurazione-storyTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-assicurazione-storyTests-umbrella.h"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		956735A80CF165C3A4DDB80FAEDD283E /* Pods-assicurazione-story-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-assicurazione-story-resources.sh"; sourceTree = "<group>"; };
 		A1B68C0269248F9B6E5DADAB90D56109 /* RSSFeed.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSSFeed.swift; path = Pod/Classes/RSSFeed.swift; sourceTree = "<group>"; };
 		A54622D0D3F715322AD3A769CCB44E74 /* Pods-assicurazione-story-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-assicurazione-story-dummy.m"; sourceTree = "<group>"; };
 		A68AD5F86DF02C8237ADB7CE10E1641A /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
 		A9802CFEF82AB2BDD9EA4BAAC50B9387 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
-		AE83CADED83D8694E2246EF2628127B1 /* AlamofireRSSParser.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = AlamofireRSSParser.modulemap; sourceTree = "<group>"; };
+		AE83CADED83D8694E2246EF2628127B1 /* AlamofireRSSParser.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AlamofireRSSParser.modulemap; sourceTree = "<group>"; };
 		B51790DFE800605E9912A617108D2EA8 /* Pods-assicurazione-story-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-assicurazione-story-acknowledgements.plist"; sourceTree = "<group>"; };
 		B58555B197827DFF5787434AADB4615F /* Pods-assicurazione-story.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-assicurazione-story.release.xcconfig"; sourceTree = "<group>"; };
-		B93C29B211276E66F138D93C141AAC4A /* Pods_assicurazione_story.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_assicurazione_story.framework; path = "Pods-assicurazione-story.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B93C29B211276E66F138D93C141AAC4A /* Pods_assicurazione_story.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_assicurazione_story.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF7F627296CE385DAB22374C9ED0C53 /* Pods-assicurazione-storyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-assicurazione-storyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C110D4991B91FFEE5ECC7AA96BC2AC52 /* RSSItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSSItem.swift; path = Pod/Classes/RSSItem.swift; sourceTree = "<group>"; };
 		C77070A86908C928C2EA78A17C2412D8 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
@@ -273,7 +273,6 @@
 				C930981678040EA15DEA46875F2586CF /* Validation.swift */,
 				D381F9C5B76F4CDBFB5392E7CA9029D6 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -323,7 +322,6 @@
 				C110D4991B91FFEE5ECC7AA96BC2AC52 /* RSSItem.swift */,
 				BD2A0666181D5A818E81FA58A01EEBAA /* Support Files */,
 			);
-			name = AlamofireRSSParser;
 			path = AlamofireRSSParser;
 			sourceTree = "<group>";
 		};

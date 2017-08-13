@@ -12,20 +12,39 @@ class NewsSourceCell: UITableViewCell {
     @IBOutlet weak var sourceImage: UIImageView!
     @IBOutlet weak var sourceTitle: UILabel!
     @IBOutlet weak var sourceGradient: UIView!
+    
+    var newsSourceInstance: NewsSourceProtocol?
 }
 
 class NewsSourcesViewController : UITableViewController {
+    let newsSources = [NewsSourceType.MONDO_ASSICURAZIONI, NewsSourceType.GENERALI, NewsSourceType.IVASS, NewsSourceType.INSURANCE_POST, NewsSourceType.FINANZA_COM]
     
-    let newsSources = [NewsSourceType.MONDO_ASSICURAZIONI, NewsSourceType.GENERALI]
+    var selectedNewsLoaded: Bool = false
     
     override func viewDidLoad() {
-        // loadNewsSourcesHere
-//        newsSources?.append(NewsSourceType.MONDO_ASSICURAZIONI)
-//        newsSources?.append(NewsSourceType.GENERALI)
+        selectedNewsLoaded = false
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return newsSources.count;
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toNewsList" {
+            let nextScene =  segue.destination as! NewsTableViewController
+            
+            // Pass the selected object to the new view controller.
+            if self.tableView.indexPathForSelectedRow != nil {
+                let cell = self.tableView.cellForRow(at: self.tableView.indexPathForSelectedRow!) as! NewsSourceCell
+                cell.newsSourceInstance?.downloadNews {
+                    nextScene.rssFeed = cell.newsSourceInstance?.getRssFeed()
+                    nextScene.rssItems = cell.newsSourceInstance?.getNewsElements()
+                    self.selectedNewsLoaded = true
+                    
+                    nextScene.reloadTableViewData()
+                }
+            }
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -34,6 +53,7 @@ class NewsSourcesViewController : UITableViewController {
         let newsSource: NewsSourceProtocol = NewsSourcesFactory.create(sourceType: newsSources[indexPath.row])
         newsSourceCell.sourceImage.image = newsSource.getNewsSourceImage()
         newsSourceCell.sourceTitle.text = newsSource.getNewsSourceTitle()
+        newsSourceCell.newsSourceInstance = newsSource
         
         let transparency: UIColor = UIColor(displayP3Red: 1, green: 1, blue: 1, alpha: 0)
         

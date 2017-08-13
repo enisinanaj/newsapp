@@ -14,15 +14,16 @@ class CommonNewsSourceProtocol: NewsSourceProtocol {
     
     var rssFeed: RSSFeed?;
     
-    func downloadNews(_ closure: () -> Void) -> RSSFeed {
+    func downloadNews(_ closure: @escaping () -> Void) {
         RSSParser.getRSSFeedResponse(path: getNewsSource()) { (rssFeed: RSSFeed?, status: NetworkResponseStatus) in
             print(rssFeed ?? "null") // it will be nil if status == .error
             self.rssFeed = rssFeed
+            closure()
         }
-        
-        closure()
-        
-        return self.rssFeed!
+    }
+    
+    func getRssFeed() -> RSSFeed? {
+        return self.rssFeed
     }
     
     func getNewsElements() -> [RSSItem] {

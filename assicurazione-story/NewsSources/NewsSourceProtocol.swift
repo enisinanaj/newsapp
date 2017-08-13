@@ -12,6 +12,9 @@ import AlamofireRSSParser
 enum NewsSourceType {
     case MONDO_ASSICURAZIONI
     case GENERALI
+    case IVASS
+    case INSURANCE_POST
+    case FINANZA_COM
 }
 
 class NewsSourcesFactory {
@@ -19,14 +22,21 @@ class NewsSourcesFactory {
         switch sourceType {
         case .GENERALI:
             return Generali()
+        case .IVASS:
+            return IVASS()
         case .MONDO_ASSICURAZIONI:
             return MondoAssicurazioni()
+        case .INSURANCE_POST:
+            return InsurancePost()
+        case .FINANZA_COM:
+            return FinanzaCom()
         }
     }
 }
 
 protocol NewsSourceProtocol {
-    func downloadNews(_ closure: () -> Void) -> RSSFeed
+    func downloadNews(_ closure: @escaping () -> Void)
+    func getRssFeed() -> RSSFeed?
     func getNewsElements() -> [RSSItem]
     func getNewsSource() -> String
     

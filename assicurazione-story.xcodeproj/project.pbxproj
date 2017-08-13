@@ -11,6 +11,8 @@
 		5F64703B1F405BCF00898566 /* CommonNewsSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F64703A1F405BCF00898566 /* CommonNewsSourceProtocol.swift */; };
 		5F64703D1F40641A00898566 /* Generali.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F64703C1F40641A00898566 /* Generali.swift */; };
 		5F64703F1F4065A800898566 /* UIColorLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F64703E1F4065A800898566 /* UIColorLib.swift */; };
+		5F6470411F4075A500898566 /* IVASS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6470401F4075A500898566 /* IVASS.swift */; };
+		5F6470431F407E3E00898566 /* InsurancePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6470421F407E3E00898566 /* InsurancePost.swift */; };
 		5F8D76681F3290E200265A9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8D76671F3290E200265A9B /* AppDelegate.swift */; };
 		5F8D766D1F3290E200265A9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F8D766B1F3290E200265A9B /* Main.storyboard */; };
 		5F8D766F1F3290E200265A9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F8D766E1F3290E200265A9B /* Assets.xcassets */; };
@@ -19,6 +21,10 @@
 		5F9306881F3FCE9900446B40 /* RSSReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9306871F3FCE9900446B40 /* RSSReader.swift */; };
 		5F93068A1F404FEE00446B40 /* NewsSourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9306891F404FEE00446B40 /* NewsSourcesViewController.swift */; };
 		5F93068C1F40507500446B40 /* NewsSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F93068B1F40507500446B40 /* NewsSourceProtocol.swift */; };
+		5FCBB4A61F40948F0084BA3B /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCBB4A51F40948F0084BA3B /* NewsDetailViewController.swift */; };
+		5FCBB4A81F409BA90084BA3B /* NewsReadMoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCBB4A71F409BA90084BA3B /* NewsReadMoreButton.swift */; };
+		5FCBB4AA1F40A0F80084BA3B /* Look.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCBB4A91F40A0F80084BA3B /* Look.swift */; };
+		5FCBB4B21F40B0410084BA3B /* FinanzaCom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCBB4B11F40B0410084BA3B /* FinanzaCom.swift */; };
 		5FF3569B1F3FA128009E68C7 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF3569A1F3FA128009E68C7 /* NewsTableViewController.swift */; };
 		5FF356A01F3FB78C009E68C7 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF3569F1F3FB78C009E68C7 /* NewsTableViewCell.swift */; };
 		69E354369C430638F01B263F /* Pods_assicurazione_storyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF44A5619C898627EB55FF6 /* Pods_assicurazione_storyTests.framework */; };
@@ -43,6 +49,8 @@
 		5F64703A1F405BCF00898566 /* CommonNewsSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonNewsSourceProtocol.swift; sourceTree = "<group>"; };
 		5F64703C1F40641A00898566 /* Generali.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generali.swift; sourceTree = "<group>"; };
 		5F64703E1F4065A800898566 /* UIColorLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorLib.swift; sourceTree = "<group>"; };
+		5F6470401F4075A500898566 /* IVASS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IVASS.swift; sourceTree = "<group>"; };
+		5F6470421F407E3E00898566 /* InsurancePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsurancePost.swift; sourceTree = "<group>"; };
 		5F8D76641F3290E200265A9B /* assicurazione-story.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "assicurazione-story.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8D76671F3290E200265A9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F8D766C1F3290E200265A9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,6 +63,10 @@
 		5F9306871F3FCE9900446B40 /* RSSReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSReader.swift; sourceTree = "<group>"; };
 		5F9306891F404FEE00446B40 /* NewsSourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewsSourcesViewController.swift; path = "assicurazione-story/NewsSources/NewsSourcesViewController.swift"; sourceTree = SOURCE_ROOT; };
 		5F93068B1F40507500446B40 /* NewsSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSourceProtocol.swift; sourceTree = "<group>"; };
+		5FCBB4A51F40948F0084BA3B /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		5FCBB4A71F409BA90084BA3B /* NewsReadMoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsReadMoreButton.swift; sourceTree = "<group>"; };
+		5FCBB4A91F40A0F80084BA3B /* Look.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Look.swift; sourceTree = "<group>"; };
+		5FCBB4B11F40B0410084BA3B /* FinanzaCom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanzaCom.swift; sourceTree = "<group>"; };
 		5FF3569A1F3FA128009E68C7 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		5FF3569C1F3FA1A8009E68C7 /* assicurazione-story.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "assicurazione-story.entitlements"; sourceTree = "<group>"; };
 		5FF3569F1F3FB78C009E68C7 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
@@ -88,6 +100,7 @@
 			children = (
 				5F9306871F3FCE9900446B40 /* RSSReader.swift */,
 				5F64703E1F4065A800898566 /* UIColorLib.swift */,
+				5FCBB4A91F40A0F80084BA3B /* Look.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -97,6 +110,7 @@
 			children = (
 				5FF3569A1F3FA128009E68C7 /* NewsTableViewController.swift */,
 				5FF3569F1F3FB78C009E68C7 /* NewsTableViewCell.swift */,
+				5FCBB4A71F409BA90084BA3B /* NewsReadMoreButton.swift */,
 			);
 			path = NewsList;
 			sourceTree = "<group>";
@@ -133,6 +147,7 @@
 				5F8D766E1F3290E200265A9B /* Assets.xcassets */,
 				5F8D76701F3290E200265A9B /* LaunchScreen.storyboard */,
 				5F8D76731F3290E200265A9B /* Info.plist */,
+				5FCBB4A51F40948F0084BA3B /* NewsDetailViewController.swift */,
 			);
 			path = "assicurazione-story";
 			sourceTree = "<group>";
@@ -149,11 +164,14 @@
 		5F93068D1F40568400446B40 /* NewsSources */ = {
 			isa = PBXGroup;
 			children = (
+				5F6470401F4075A500898566 /* IVASS.swift */,
+				5F6470421F407E3E00898566 /* InsurancePost.swift */,
 				5F9306891F404FEE00446B40 /* NewsSourcesViewController.swift */,
 				5F93068B1F40507500446B40 /* NewsSourceProtocol.swift */,
 				5F6470381F405A6600898566 /* MondoAssicurazioni.swift */,
 				5F64703A1F405BCF00898566 /* CommonNewsSourceProtocol.swift */,
 				5F64703C1F40641A00898566 /* Generali.swift */,
+				5FCBB4B11F40B0410084BA3B /* FinanzaCom.swift */,
 			);
 			path = NewsSources;
 			sourceTree = "<group>";
@@ -394,16 +412,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FCBB4AA1F40A0F80084BA3B /* Look.swift in Sources */,
+				5F6470431F407E3E00898566 /* InsurancePost.swift in Sources */,
 				5FF3569B1F3FA128009E68C7 /* NewsTableViewController.swift in Sources */,
 				5F64703F1F4065A800898566 /* UIColorLib.swift in Sources */,
 				5F6470391F405A6600898566 /* MondoAssicurazioni.swift in Sources */,
 				5F64703B1F405BCF00898566 /* CommonNewsSourceProtocol.swift in Sources */,
+				5FCBB4A81F409BA90084BA3B /* NewsReadMoreButton.swift in Sources */,
 				5F9306881F3FCE9900446B40 /* RSSReader.swift in Sources */,
+				5FCBB4A61F40948F0084BA3B /* NewsDetailViewController.swift in Sources */,
 				5F64703D1F40641A00898566 /* Generali.swift in Sources */,
+				5F6470411F4075A500898566 /* IVASS.swift in Sources */,
 				5FF356A01F3FB78C009E68C7 /* NewsTableViewCell.swift in Sources */,
 				5F8D76681F3290E200265A9B /* AppDelegate.swift in Sources */,
 				5F93068A1F404FEE00446B40 /* NewsSourcesViewController.swift in Sources */,
 				5F93068C1F40507500446B40 /* NewsSourceProtocol.swift in Sources */,
+				5FCBB4B21F40B0410084BA3B /* FinanzaCom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

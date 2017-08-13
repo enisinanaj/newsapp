@@ -1,5 +1,5 @@
 //
-//  MondoAssicurazioni.swift
+//  InsurancePost.swift
 //  assicurazione-story
 //
 //  Created by Eni Sinanaj on 13/08/2017.
@@ -8,21 +8,21 @@
 
 import AlamofireRSSParser
 
-class MondoAssicurazioni: CommonNewsSourceProtocol {
+class InsurancePost: CommonNewsSourceProtocol {
     
     override func getNewsElements() -> [RSSItem] {
         return self.rssFeed!.items
     }
     
     override func getNewsSource() -> String {
-        return "https://feeds.feedburner.com/mondo-assicurazioni?format=xml"
+        return "https://www.postonline.co.uk/feeds/rss/category/europe/italy"
     }
     
     override func getBackgroundImageUrl() -> String {
-        return "https://c1.staticflickr.com/1/572/33165940281_16d24ef49e_n.jpg"
+        return "https://c2.staticflickr.com/8/7003/6812695893_9e217df825_n.jpg"
     }
     
     override func getNewsSourceTitle() -> String {
-        return "MONDO ASSICURAZIONI";
+        return "INSURANCE POST";
     }
 }
