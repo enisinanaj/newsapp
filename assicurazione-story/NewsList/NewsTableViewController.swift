@@ -78,12 +78,9 @@ class NewsTableViewController : UIViewController, UITableViewDelegate, UITableVi
         tableViewCell.newsExcerpt?.text = rssItem.itemDescription?.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
         
         tableViewCell.sizeToFit()
+        tableViewCell.updateConstraints()
         
         return tableViewCell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 255
     }
     
 }

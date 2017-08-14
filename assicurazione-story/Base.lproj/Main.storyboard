@@ -15,7 +15,7 @@
         <scene sceneID="jhT-8P-OLH">
             <objects>
                 <navigationController id="XcX-tp-MTS" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="Chevron-Back" backIndicatorTransitionMaskImage="Chevron-Back" id="V0t-IJ-f6u">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" backIndicatorImage="Chevron-Back" largeTitles="YES" backIndicatorTransitionMaskImage="Chevron-Back" id="V0t-IJ-f6u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.99281746709999996" green="1" blue="0.9825371503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -39,7 +39,7 @@
             <objects>
                 <tableViewController id="a7b-fG-L3Z" customClass="NewsSourcesViewController" customModule="assicurazione_story" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0AB-3t-S5A">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -56,7 +56,16 @@
                                         <view contentMode="scaleToFill" restorationIdentifier="newsSourceGradientBackground" translatesAutoresizingMaskIntoConstraints="NO" id="zpG-9X-6oU" userLabel="NewsSourceGradientBackground" customClass="GradientView" customModule="assicurazione_story" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="184.5"/>
                                             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="184.5" id="Kjg-K7-2Es"/>
+                                            </constraints>
                                         </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LargerSourceName" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XN2-57-vBj">
+                                            <rect key="frame" x="70" y="35" width="898.5" height="185"/>
+                                            <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="117"/>
+                                            <color key="textColor" white="1" alpha="0.29219850352112675" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="newsSourceTitle" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pL2-Pb-xL3" userLabel="NewsSourceTitle">
                                             <rect key="frame" x="10" y="147" width="355" height="27.5"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
@@ -67,10 +76,13 @@
                                     <constraints>
                                         <constraint firstItem="zpG-9X-6oU" firstAttribute="leading" secondItem="yYo-VH-VRk" secondAttribute="leading" id="BtL-t6-NoV"/>
                                         <constraint firstAttribute="trailing" secondItem="pL2-Pb-xL3" secondAttribute="trailing" constant="10" id="Ej9-GV-we9"/>
+                                        <constraint firstItem="XN2-57-vBj" firstAttribute="top" secondItem="yYo-VH-VRk" secondAttribute="top" constant="35" id="FYP-wj-IfN"/>
                                         <constraint firstItem="pL2-Pb-xL3" firstAttribute="leading" secondItem="yYo-VH-VRk" secondAttribute="leading" constant="10" id="Mbc-1b-Kqp"/>
+                                        <constraint firstItem="XN2-57-vBj" firstAttribute="leading" secondItem="yYo-VH-VRk" secondAttribute="leading" constant="70" id="PtX-mf-Eo9"/>
                                         <constraint firstItem="zpG-9X-6oU" firstAttribute="top" secondItem="yYo-VH-VRk" secondAttribute="top" id="X1z-CI-Trj"/>
                                         <constraint firstItem="eey-gd-kTr" firstAttribute="top" secondItem="yYo-VH-VRk" secondAttribute="top" id="X6P-Aw-LaG"/>
                                         <constraint firstAttribute="trailing" secondItem="eey-gd-kTr" secondAttribute="trailing" id="aDq-Kb-GBr"/>
+                                        <constraint firstItem="XN2-57-vBj" firstAttribute="height" secondItem="yYo-VH-VRk" secondAttribute="height" id="bkd-h5-ItF"/>
                                         <constraint firstAttribute="bottom" secondItem="eey-gd-kTr" secondAttribute="bottom" id="eNQ-QW-cXo"/>
                                         <constraint firstAttribute="trailing" secondItem="zpG-9X-6oU" secondAttribute="trailing" id="oei-mn-c2W"/>
                                         <constraint firstItem="eey-gd-kTr" firstAttribute="leading" secondItem="yYo-VH-VRk" secondAttribute="leading" id="qkp-eK-x1A"/>
@@ -79,6 +91,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="largeSourceName" destination="XN2-57-vBj" id="dgI-Wr-28b"/>
                                     <outlet property="sourceGradient" destination="zpG-9X-6oU" id="LYt-0B-ohd"/>
                                     <outlet property="sourceImage" destination="eey-gd-kTr" id="1ET-Cn-vVb"/>
                                     <outlet property="sourceTitle" destination="pL2-Pb-xL3" id="tAi-sf-2Xa"/>
@@ -105,35 +118,35 @@
             <objects>
                 <viewController id="XQP-15-32N" customClass="NewsDetailViewController" customModule="assicurazione_story" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zHL-9X-ImS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3Z-A0-jRH">
-                                <rect key="frame" x="10" y="79" width="355" height="21"/>
+                                <rect key="frame" x="10" y="15" width="355" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.56169041450000001" green="0.56169041450000001" blue="0.56169041450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="414-1B-9GG">
-                                <rect key="frame" x="10" y="110" width="355" height="21"/>
+                                <rect key="frame" x="10" y="46" width="355" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mL-Og-V95">
-                                <rect key="frame" x="10" y="156" width="355" height="31.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mL-Og-V95">
+                                <rect key="frame" x="10" y="92" width="355" height="31.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31Y-qd-kzD">
-                                <rect key="frame" x="10" y="212.5" width="355" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31Y-qd-kzD">
+                                <rect key="frame" x="10" y="148.5" width="355" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfr-Fc-lUX">
-                                <rect key="frame" x="10" y="253" width="355" height="30"/>
+                                <rect key="frame" x="10" y="189" width="355" height="30"/>
                                 <state key="normal" title="Articolo originale">
                                     <color key="titleColor" red="0.74052784969999996" green="0.052746795139999997" blue="0.039405964049999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -178,11 +191,11 @@
             <objects>
                 <viewController title="LE UTLIME" modalTransitionStyle="flipHorizontal" id="6Ez-9i-rlr" customClass="NewsTableViewController" customModule="assicurazione_story" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EiO-Ks-XtO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorInsetReference="fromAutomaticInsets" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jCz-bc-SG8">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -193,7 +206,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="229.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="newsDate" text="Yesterday, 16 June" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMJ-F3-02e" userLabel="CellNewsDate">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="newsDate" text="Yesterday, 16 June" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMJ-F3-02e" userLabel="CellNewsDate">
                                                     <rect key="frame" x="10" y="10" width="169" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="jyZ-Sv-DnN"/>
@@ -202,19 +215,19 @@
                                                     <color key="textColor" red="0.56169041450777202" green="0.56169041450777202" blue="0.56169041450777202" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="newsSource" text="Mondo Assicurazioni" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bp-xI-yqb" userLabel="CellNewsSource">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="newsSource" text="Mondo Assicurazioni" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bp-xI-yqb" userLabel="CellNewsSource">
                                                     <rect key="frame" x="196.5" y="10" width="168.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="newsTitle" text="Opzioni Binarie e regolamenti internazionali: facciamo chiarezza" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0s-3R-1bc" userLabel="CellNewsTitle">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="newsTitle" text="Opzioni Binarie e regolamenti internazionali: facciamo chiarezza" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0s-3R-1bc" userLabel="CellNewsTitle">
                                                     <rect key="frame" x="10" y="46" width="355" height="31.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="newsExcerpt" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Det-nl-NdP" userLabel="CellNewsExcerpt">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="newsExcerpt" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Det-nl-NdP" userLabel="CellNewsExcerpt">
                                                     <rect key="frame" x="10" y="87.5" width="355" height="72"/>
                                                     <string key="text">Il mondo delle opzioni binarie si configura talvolta come una giungla di broker, portali, notizie contrastanti e ambigue. Di chi ci si può fidare? Quali broker sono più affidabili?</string>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
@@ -223,9 +236,6 @@
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="newsReadMore" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKo-Z0-5DY" userLabel="CellNewsReadMore" customClass="NewsReadMoreButton" customModule="assicurazione_story" customModuleProvider="target">
                                                     <rect key="frame" x="10" y="169.5" width="62" height="55"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="62" id="fgy-4x-2VN"/>
-                                                    </constraints>
                                                     <state key="normal" title="Continua">
                                                         <color key="titleColor" red="0.74052784974093266" green="0.052746795136486807" blue="0.039405964046160549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
@@ -240,7 +250,10 @@
                                                 <constraint firstItem="pMJ-F3-02e" firstAttribute="top" secondItem="opG-8A-WL7" secondAttribute="top" constant="10" id="HAb-Cy-DlY"/>
                                                 <constraint firstAttribute="trailing" secondItem="r0s-3R-1bc" secondAttribute="trailing" constant="10" id="Kny-eG-mnj"/>
                                                 <constraint firstItem="pMJ-F3-02e" firstAttribute="leading" secondItem="opG-8A-WL7" secondAttribute="leading" constant="10" id="MUe-uq-X26"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pMJ-F3-02e" secondAttribute="trailing" constant="20" symbolic="YES" id="RDv-ET-Xg3"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rKo-Z0-5DY" secondAttribute="trailing" constant="20" symbolic="YES" id="RIC-jJ-Hzi"/>
                                                 <constraint firstItem="rKo-Z0-5DY" firstAttribute="top" secondItem="Det-nl-NdP" secondAttribute="bottom" constant="10" id="TIe-Gn-UVG"/>
+                                                <constraint firstItem="2bp-xI-yqb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="opG-8A-WL7" secondAttribute="leading" constant="20" symbolic="YES" id="aA3-CT-vtg"/>
                                                 <constraint firstItem="rKo-Z0-5DY" firstAttribute="leading" secondItem="opG-8A-WL7" secondAttribute="leading" constant="10" id="dsm-1T-tBQ"/>
                                                 <constraint firstItem="pMJ-F3-02e" firstAttribute="width" secondItem="opG-8A-WL7" secondAttribute="width" multiplier="0.45" id="dss-7w-aM3"/>
                                                 <constraint firstAttribute="bottom" secondItem="rKo-Z0-5DY" secondAttribute="bottom" constant="5" id="fgu-YA-0i2"/>

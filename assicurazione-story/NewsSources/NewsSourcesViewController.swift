@@ -12,9 +12,17 @@ class NewsSourceCell: UITableViewCell {
     @IBOutlet weak var sourceImage: UIImageView!
     @IBOutlet weak var sourceTitle: UILabel!
     @IBOutlet weak var sourceGradient: UIView!
+    @IBOutlet weak var largeSourceName: UILabel!
     
     var newsSourceInstance: NewsSourceProtocol?
 }
+
+var ColorsArray = [
+    (start: UIColor(0xCF000F).cgColor, end: UIColor(0xE3000E).cgColor),
+    (start: UIColor(0x7E3661).cgColor, end: UIColor(0x953163).cgColor),
+    (start: UIColor(0xF04903).cgColor, end: UIColor(0xFD5B03).cgColor),
+    (start: UIColor(0x00587A).cgColor, end: UIColor(0x008891).cgColor),
+    (start: UIColor(0xBF4A67).cgColor, end: UIColor(0xE6567A).cgColor)]
 
 class NewsSourcesViewController : UITableViewController {
     let newsSources = [NewsSourceType.MONDO_ASSICURAZIONI, NewsSourceType.GENERALI, NewsSourceType.IVASS, NewsSourceType.INSURANCE_POST, NewsSourceType.FINANZA_COM]
@@ -51,14 +59,16 @@ class NewsSourcesViewController : UITableViewController {
         let newsSourceCell : NewsSourceCell = tableView.dequeueReusableCell(withIdentifier: "newsSourceRow", for: indexPath) as! NewsSourceCell
         
         let newsSource: NewsSourceProtocol = NewsSourcesFactory.create(sourceType: newsSources[indexPath.row])
-        newsSourceCell.sourceImage.image = newsSource.getNewsSourceImage()
         newsSourceCell.sourceTitle.text = newsSource.getNewsSourceTitle()
         newsSourceCell.newsSourceInstance = newsSource
         
-        let transparency: UIColor = UIColor(displayP3Red: 1, green: 1, blue: 1, alpha: 0)
+        // let transparency: UIColor = UIColor(displayP3Red: 1, green: 1, blue: 1, alpha: 0)
+        // let black: UIColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.4)
         
-        newsSourceCell.sourceGradient.gradientLayer.colors = [UIColor.black.cgColor, transparency.cgColor]
-        newsSourceCell.sourceGradient.gradientLayer.gradient = GradientPoint.bottomTop.draw()
+        let tuple = ColorsArray[indexPath.row]
+        newsSourceCell.sourceGradient.gradientLayer.colors = [tuple.start, tuple.end]
+        newsSourceCell.sourceGradient.gradientLayer.gradient = GradientPoint.bottomRightTopLeft.draw()
+        newsSourceCell.largeSourceName.text = newsSource.getNewsSourceTitle()
         
         return newsSourceCell
     }
