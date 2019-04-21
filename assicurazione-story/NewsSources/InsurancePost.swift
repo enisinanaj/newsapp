@@ -8,7 +8,7 @@
 
 import AlamofireRSSParser
 
-class InsurancePost: CommonNewsSourceProtocol {
+class AnsaItTopNews: CommonNewsSourceProtocol {
     
     override func getNewsElements() -> [RSSItem] {
         return self.rssFeed!.items

@@ -19,7 +19,7 @@ class NewsSourceCell: UITableViewCell {
 }
 
 class NewsSourcesViewController : UITableViewController {
-    let newsSources = [NewsSourceType.PEW_RESEARCH_CENTER, NewsSourceType.HUFF_WORLD_NEWS, NewsSourceType.AD, NewsSourceType.HUFF_POLITICS, NewsSourceType.TIME_WORLD, NewsSourceType.THE_WALL_STREET_JOURNAL, NewsSourceType.AD, NewsSourceType.BBC_NEWS, NewsSourceType.INSURANCE_POST, NewsSourceType.TIME_SCIENCE, NewsSourceType.AD, NewsSourceType.INSURANCE_POST_REGULATION, NewsSourceType.REUTERS_WORLD_NEWS, NewsSourceType.INSURANCE_POST_RISK_MANAGEMENT, NewsSourceType.AD]
+    let newsSources = [NewsSourceType.ANSA_IT, NewsSourceType.TGCOM24, NewsSourceType.AD, NewsSourceType.TGCOM24Politics, NewsSourceType.TGCOM24SPORT, NewsSourceType.REPUBBLICA,  NewsSourceType.AD, NewsSourceType.ANSA_IT_WORLD, NewsSourceType.CORRIERE, NewsSourceType.AD, NewsSourceType.CORRIERE_ESTERI]
     
     var selectedNewsLoaded: Bool = false
     

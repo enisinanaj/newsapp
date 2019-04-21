@@ -1,5 +1,5 @@
 //
-//  FoxNewsWorld.swift
+//  AnsaItTopNew.swift
 //  assicurazione-story
 //
 //  Created by Eni Sinanaj on 21/04/2019.
@@ -8,48 +8,48 @@
 
 import AlamofireRSSParser
 
-class TimeWorld: CommonNewsSourceProtocol {
+class AnsaItTopNews: CommonNewsSourceProtocol {
     
     override func getNewsElements() -> [RSSItem] {
         return self.rssFeed!.items
     }
     
     override func getNewsSource() -> String {
-        return "https://feeds.feedburner.com/time/world?format=xml"
+        return "https://www.ansa.it/sito/notizie/topnews/topnews_rss.xml"
     }
     
     override func getBackgroundImageUrl() -> String {
-        return "https://c2.staticflickr.com/8/7003/6812695893_9e217df825_n.jpg"
+        return "https://c1.staticflickr.com/1/572/33165940281_16d24ef49e_n.jpg"
     }
     
     override func getNewsSourceTitle() -> String {
-        return "TIME - World";
+        return "ANSA.it - Ultima Ora";
     }
     
     override func getBackgroundColor() -> (start: CGColor, end: CGColor) {
-        return (start: UIColor(0xBE1931).cgColor, end: UIColor(0x851122).cgColor)
+        return (start: UIColor(0x008D23).cgColor, end: UIColor(0x4CAF65).cgColor)
     }
 }
 
-class TimeScience: CommonNewsSourceProtocol {
+class AnsaItMondo: CommonNewsSourceProtocol {
     
     override func getNewsElements() -> [RSSItem] {
         return self.rssFeed!.items
     }
     
     override func getNewsSource() -> String {
-        return "https://feeds.feedburner.com/time/scienceandhealth?format=xml"
+        return "https://www.ansa.it/sito/notizie/mondo/mondo_rss.xml"
     }
     
     override func getBackgroundImageUrl() -> String {
-        return "https://c2.staticflickr.com/8/7003/6812695893_9e217df825_n.jpg"
+        return "https://c1.staticflickr.com/1/572/33165940281_16d24ef49e_n.jpg"
     }
     
     override func getNewsSourceTitle() -> String {
-        return "TIME - Science";
+        return "ANSA.it - Mondo";
     }
     
     override func getBackgroundColor() -> (start: CGColor, end: CGColor) {
-        return (start: UIColor(0xc91a33).cgColor, end: UIColor(0xb2172e).cgColor)
+        return (start: UIColor(0xDB2E59).cgColor, end: UIColor(0xDE4269).cgColor)
     }
 }

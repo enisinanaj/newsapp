@@ -1,5 +1,5 @@
 //
-//  HuffWorldNews.swift
+//  Corriere.swift
 //  assicurazione-story
 //
 //  Created by Eni Sinanaj on 21/04/2019.
@@ -8,48 +8,49 @@
 
 import AlamofireRSSParser
 
-class HuffWorldNews: CommonNewsSourceProtocol {
+class Corriere: CommonNewsSourceProtocol {
     
     override func getNewsElements() -> [RSSItem] {
         return self.rssFeed!.items
     }
     
     override func getNewsSource() -> String {
-        return "https://www.huffpost.com/section/world-news/feed"
+        return "https://xml2.corriereobjects.it/rss/homepage.xml"
     }
     
     override func getBackgroundImageUrl() -> String {
-        return "https://c2.staticflickr.com/8/7003/6812695893_9e217df825_n.jpg"
+        return "https://c1.staticflickr.com/1/572/33165940281_16d24ef49e_n.jpg"
     }
     
     override func getNewsSourceTitle() -> String {
-        return "HuffPost World News";
+        return "Corriere della Sera - Tutte le notizie";
     }
     
     override func getBackgroundColor() -> (start: CGColor, end: CGColor) {
-        return (start: UIColor(0x005b5b).cgColor, end: UIColor(0x262E2D).cgColor)
+        return (start: UIColor(0xE3641E).cgColor, end: UIColor(0x9E4615).cgColor)
     }
 }
 
-class HuffPolitics: CommonNewsSourceProtocol {
+class CorriereEsteri: CommonNewsSourceProtocol {
     
     override func getNewsElements() -> [RSSItem] {
         return self.rssFeed!.items
     }
     
     override func getNewsSource() -> String {
-        return "https://www.huffpost.com/section/politics/feed"
+        return "https://xml2.corriereobjects.it/rss/esteri.xml"
     }
     
     override func getBackgroundImageUrl() -> String {
-        return "https://c2.staticflickr.com/8/7003/6812695893_9e217df825_n.jpg"
+        return "https://c1.staticflickr.com/1/572/33165940281_16d24ef49e_n.jpg"
     }
     
     override func getNewsSourceTitle() -> String {
-        return "HuffPost Politics";
+        return "Corriere della Sera - Esteri";
     }
     
     override func getBackgroundColor() -> (start: CGColor, end: CGColor) {
-        return (start: UIColor(0x374341).cgColor, end: UIColor(0x005151).cgColor)
+        return (start: UIColor(0x15299E).cgColor, end: UIColor(0x10207E).cgColor)
     }
 }
+

@@ -10,47 +10,38 @@ import Foundation
 import AlamofireRSSParser
 
 enum NewsSourceType {
-    case INSURANCE_POST
-    case INSURANCE_POST_RISK_MANAGEMENT
-    case INSURANCE_POST_REGULATION
-    case THE_WALL_STREET_JOURNAL
-    case BBC_NEWS
-    case PEW_RESEARCH_CENTER
-    case REUTERS_WORLD_NEWS
-    case HUFF_WORLD_NEWS
-    case HUFF_POLITICS
-    case TIME_WORLD
-    case TIME_SCIENCE
+    case ANSA_IT
+    case ANSA_IT_WORLD
+    case TGCOM24
+    case TGCOM24Politics
+    case TGCOM24SPORT
+    case REPUBBLICA
+    case CORRIERE
+    case CORRIERE_ESTERI
     case AD
 }
 
 class NewsSourcesFactory {
     static func create(sourceType: NewsSourceType) -> NewsSourceProtocol? {
         switch sourceType {
-        case .INSURANCE_POST:
-            return InsurancePost()
-        case .INSURANCE_POST_RISK_MANAGEMENT:
-            return InsurancePostRiskManagement()
-        case .INSURANCE_POST_REGULATION:
-            return InsurancePostRegulation()
+        case .ANSA_IT:
+            return AnsaItTopNews()
+        case .ANSA_IT_WORLD:
+            return AnsaItMondo()
+        case .TGCOM24:
+            return TGCOM24Mondo()
+        case .TGCOM24Politics:
+            return TGCOM24Politica()
+        case .TGCOM24SPORT:
+            return TGCOM24Sport()
+        case .REPUBBLICA:
+            return Repubblica()
+        case .CORRIERE:
+            return Corriere()
+        case .CORRIERE_ESTERI:
+            return CorriereEsteri()
         case .AD:
             return nil
-        case .THE_WALL_STREET_JOURNAL:
-            return TheWallStreetJournal()
-        case .BBC_NEWS:
-            return BBCNews()
-        case .REUTERS_WORLD_NEWS:
-            return ReutersWorldNews()
-        case .PEW_RESEARCH_CENTER:
-            return PewResearchCenter()
-        case .HUFF_WORLD_NEWS:
-            return HuffWorldNews()
-        case .HUFF_POLITICS:
-            return HuffPolitics()
-        case .TIME_WORLD:
-            return TimeWorld()
-        case .TIME_SCIENCE:
-            return TimeScience()
         }
         
     }

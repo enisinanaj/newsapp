@@ -71,7 +71,13 @@ class NewsDetailViewController: UIViewController {
     func loadData() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/YYYY @ HH:mm"
-        dateTime.text = dateFormatter.string(from: (rssItem!.pubDate)!)
+        
+        if rssItem!.pubDate != nil {
+            dateTime.text = dateFormatter.string(from: (rssItem!.pubDate)!)
+        } else {
+            dateTime.text = ""
+        }
+        
         sourceName.text = sourceTitle
         
         newsBody.text = rssItem!.itemDescription?.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)

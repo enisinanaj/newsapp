@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5F6470391F405A6600898566 /* InsurancePostRegulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6470381F405A6600898566 /* InsurancePostRegulation.swift */; };
+		5F2EA574226C7AAE008DC745 /* AnsaItTopNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2EA573226C7AAE008DC745 /* AnsaItTopNews.swift */; };
+		5F2EA576226C8123008DC745 /* Repubblica.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2EA575226C8123008DC745 /* Repubblica.swift */; };
+		5F2EA578226C81F6008DC745 /* Corriere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2EA577226C81F6008DC745 /* Corriere.swift */; };
+		5F6470391F405A6600898566 /* TGCOM24.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6470381F405A6600898566 /* TGCOM24.swift */; };
 		5F64703B1F405BCF00898566 /* CommonNewsSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F64703A1F405BCF00898566 /* CommonNewsSourceProtocol.swift */; };
 		5F64703F1F4065A800898566 /* UIColorLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F64703E1F4065A800898566 /* UIColorLib.swift */; };
-		5F6470411F4075A500898566 /* IVASS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6470401F4075A500898566 /* IVASS.swift */; };
-		5F6470431F407E3E00898566 /* InsurancePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6470421F407E3E00898566 /* InsurancePost.swift */; };
 		5F8D76681F3290E200265A9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8D76671F3290E200265A9B /* AppDelegate.swift */; };
 		5F8D766D1F3290E200265A9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F8D766B1F3290E200265A9B /* Main.storyboard */; };
 		5F8D76721F3290E200265A9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F8D76701F3290E200265A9B /* LaunchScreen.storyboard */; };
@@ -21,16 +22,9 @@
 		5F93068C1F40507500446B40 /* NewsSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F93068B1F40507500446B40 /* NewsSourceProtocol.swift */; };
 		5FB1F86F226BC20C00CB7897 /* AdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB1F86D226BC20C00CB7897 /* AdTableViewCell.swift */; };
 		5FB1F870226BC20C00CB7897 /* AdTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB1F86E226BC20C00CB7897 /* AdTableViewCell.xib */; };
-		5FB1F872226BD37600CB7897 /* TheWallStreetJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB1F871226BD37600CB7897 /* TheWallStreetJournal.swift */; };
-		5FB1F874226BD40900CB7897 /* BBCNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB1F873226BD40900CB7897 /* BBCNews.swift */; };
-		5FB1F876226BD4B100CB7897 /* ReutersWorldNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB1F875226BD4B100CB7897 /* ReutersWorldNews.swift */; };
-		5FB1F878226BD6AD00CB7897 /* PewResearchCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB1F877226BD6AD00CB7897 /* PewResearchCenter.swift */; };
-		5FB1F87A226BD84000CB7897 /* HuffWorldNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB1F879226BD84000CB7897 /* HuffWorldNews.swift */; };
-		5FB1F87C226BD9F800CB7897 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB1F87B226BD9F800CB7897 /* Time.swift */; };
 		5FCBB4A61F40948F0084BA3B /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCBB4A51F40948F0084BA3B /* NewsDetailViewController.swift */; };
 		5FCBB4A81F409BA90084BA3B /* NewsReadMoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCBB4A71F409BA90084BA3B /* NewsReadMoreButton.swift */; };
 		5FCBB4AA1F40A0F80084BA3B /* Look.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCBB4A91F40A0F80084BA3B /* Look.swift */; };
-		5FCBB4B21F40B0410084BA3B /* InsurancePostRiskManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCBB4B11F40B0410084BA3B /* InsurancePostRiskManagement.swift */; };
 		5FD6D141214844780029C9C4 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FD6D140214844780029C9C4 /* Media.xcassets */; };
 		5FD6D143214846410029C9C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FD6D142214846410029C9C4 /* Assets.xcassets */; };
 		5FF3569B1F3FA128009E68C7 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF3569A1F3FA128009E68C7 /* NewsTableViewController.swift */; };
@@ -53,11 +47,12 @@
 		2EF44A5619C898627EB55FF6 /* Pods_assicurazione_storyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_assicurazione_storyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32BEE30D684795ED248B8D65 /* Pods-assicurazione-storyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-assicurazione-storyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-assicurazione-storyTests/Pods-assicurazione-storyTests.release.xcconfig"; sourceTree = "<group>"; };
 		37E83B4A2081490727F61A18 /* Pods_assicurazione_story.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_assicurazione_story.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F6470381F405A6600898566 /* InsurancePostRegulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsurancePostRegulation.swift; sourceTree = "<group>"; };
+		5F2EA573226C7AAE008DC745 /* AnsaItTopNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnsaItTopNews.swift; sourceTree = "<group>"; };
+		5F2EA575226C8123008DC745 /* Repubblica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repubblica.swift; sourceTree = "<group>"; };
+		5F2EA577226C81F6008DC745 /* Corriere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Corriere.swift; sourceTree = "<group>"; };
+		5F6470381F405A6600898566 /* TGCOM24.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TGCOM24.swift; sourceTree = "<group>"; };
 		5F64703A1F405BCF00898566 /* CommonNewsSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonNewsSourceProtocol.swift; sourceTree = "<group>"; };
 		5F64703E1F4065A800898566 /* UIColorLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorLib.swift; sourceTree = "<group>"; };
-		5F6470401F4075A500898566 /* IVASS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IVASS.swift; sourceTree = "<group>"; };
-		5F6470421F407E3E00898566 /* InsurancePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsurancePost.swift; sourceTree = "<group>"; };
 		5F8D76641F3290E200265A9B /* assicurazione-story.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "assicurazione-story.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8D76671F3290E200265A9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F8D766C1F3290E200265A9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,16 +66,9 @@
 		5F93068B1F40507500446B40 /* NewsSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSourceProtocol.swift; sourceTree = "<group>"; };
 		5FB1F86D226BC20C00CB7897 /* AdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTableViewCell.swift; sourceTree = "<group>"; };
 		5FB1F86E226BC20C00CB7897 /* AdTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdTableViewCell.xib; sourceTree = "<group>"; };
-		5FB1F871226BD37600CB7897 /* TheWallStreetJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheWallStreetJournal.swift; sourceTree = "<group>"; };
-		5FB1F873226BD40900CB7897 /* BBCNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCNews.swift; sourceTree = "<group>"; };
-		5FB1F875226BD4B100CB7897 /* ReutersWorldNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReutersWorldNews.swift; sourceTree = "<group>"; };
-		5FB1F877226BD6AD00CB7897 /* PewResearchCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PewResearchCenter.swift; sourceTree = "<group>"; };
-		5FB1F879226BD84000CB7897 /* HuffWorldNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuffWorldNews.swift; sourceTree = "<group>"; };
-		5FB1F87B226BD9F800CB7897 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		5FCBB4A51F40948F0084BA3B /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		5FCBB4A71F409BA90084BA3B /* NewsReadMoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsReadMoreButton.swift; sourceTree = "<group>"; };
 		5FCBB4A91F40A0F80084BA3B /* Look.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Look.swift; sourceTree = "<group>"; };
-		5FCBB4B11F40B0410084BA3B /* InsurancePostRiskManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsurancePostRiskManagement.swift; sourceTree = "<group>"; };
 		5FD6D140214844780029C9C4 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		5FD6D142214846410029C9C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "assicurazione-story/Assets.xcassets"; sourceTree = "<group>"; };
 		5FF3569A1F3FA128009E68C7 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +99,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F2EA572226C78A9008DC745 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				5F6470381F405A6600898566 /* TGCOM24.swift */,
+				5F2EA573226C7AAE008DC745 /* AnsaItTopNews.swift */,
+				5F2EA575226C8123008DC745 /* Repubblica.swift */,
+				5F2EA577226C81F6008DC745 /* Corriere.swift */,
+			);
+			name = Providers;
+			sourceTree = "<group>";
+		};
 		5F6470361F40578300898566 /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,19 +182,10 @@
 		5F93068D1F40568400446B40 /* NewsSources */ = {
 			isa = PBXGroup;
 			children = (
-				5F6470401F4075A500898566 /* IVASS.swift */,
-				5F6470421F407E3E00898566 /* InsurancePost.swift */,
+				5F2EA572226C78A9008DC745 /* Providers */,
 				5F9306891F404FEE00446B40 /* NewsSourcesViewController.swift */,
 				5F93068B1F40507500446B40 /* NewsSourceProtocol.swift */,
-				5F6470381F405A6600898566 /* InsurancePostRegulation.swift */,
 				5F64703A1F405BCF00898566 /* CommonNewsSourceProtocol.swift */,
-				5FCBB4B11F40B0410084BA3B /* InsurancePostRiskManagement.swift */,
-				5FB1F871226BD37600CB7897 /* TheWallStreetJournal.swift */,
-				5FB1F873226BD40900CB7897 /* BBCNews.swift */,
-				5FB1F875226BD4B100CB7897 /* ReutersWorldNews.swift */,
-				5FB1F877226BD6AD00CB7897 /* PewResearchCenter.swift */,
-				5FB1F879226BD84000CB7897 /* HuffWorldNews.swift */,
-				5FB1F87B226BD9F800CB7897 /* Time.swift */,
 			);
 			path = NewsSources;
 			sourceTree = "<group>";
@@ -394,28 +384,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FB1F874226BD40900CB7897 /* BBCNews.swift in Sources */,
 				5FB1F86F226BC20C00CB7897 /* AdTableViewCell.swift in Sources */,
 				5FCBB4AA1F40A0F80084BA3B /* Look.swift in Sources */,
-				5F6470431F407E3E00898566 /* InsurancePost.swift in Sources */,
 				5FF3569B1F3FA128009E68C7 /* NewsTableViewController.swift in Sources */,
 				5F64703F1F4065A800898566 /* UIColorLib.swift in Sources */,
-				5F6470391F405A6600898566 /* InsurancePostRegulation.swift in Sources */,
+				5F2EA578226C81F6008DC745 /* Corriere.swift in Sources */,
+				5F6470391F405A6600898566 /* TGCOM24.swift in Sources */,
 				5F64703B1F405BCF00898566 /* CommonNewsSourceProtocol.swift in Sources */,
 				5FCBB4A81F409BA90084BA3B /* NewsReadMoreButton.swift in Sources */,
 				5F9306881F3FCE9900446B40 /* RSSReader.swift in Sources */,
+				5F2EA574226C7AAE008DC745 /* AnsaItTopNews.swift in Sources */,
 				5FCBB4A61F40948F0084BA3B /* NewsDetailViewController.swift in Sources */,
-				5FB1F876226BD4B100CB7897 /* ReutersWorldNews.swift in Sources */,
-				5FB1F87A226BD84000CB7897 /* HuffWorldNews.swift in Sources */,
-				5FB1F872226BD37600CB7897 /* TheWallStreetJournal.swift in Sources */,
-				5FB1F87C226BD9F800CB7897 /* Time.swift in Sources */,
-				5FB1F878226BD6AD00CB7897 /* PewResearchCenter.swift in Sources */,
-				5F6470411F4075A500898566 /* IVASS.swift in Sources */,
 				5FF356A01F3FB78C009E68C7 /* NewsTableViewCell.swift in Sources */,
+				5F2EA576226C8123008DC745 /* Repubblica.swift in Sources */,
 				5F8D76681F3290E200265A9B /* AppDelegate.swift in Sources */,
 				5F93068A1F404FEE00446B40 /* NewsSourcesViewController.swift in Sources */,
 				5F93068C1F40507500446B40 /* NewsSourceProtocol.swift in Sources */,
-				5FCBB4B21F40B0410084BA3B /* InsurancePostRiskManagement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,7 +558,7 @@
 				INFOPLIST_FILE = "assicurazione-story/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.newlinecode.apps.adrev.newsaggr;
+				PRODUCT_BUNDLE_IDENTIFIER = com.newlinecode.apps.adrev.newsagg.it;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -591,7 +575,7 @@
 				INFOPLIST_FILE = "assicurazione-story/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.newlinecode.apps.adrev.newsaggr;
+				PRODUCT_BUNDLE_IDENTIFIER = com.newlinecode.apps.adrev.newsagg.it;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;

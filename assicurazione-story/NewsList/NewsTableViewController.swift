@@ -71,7 +71,11 @@ class NewsTableViewController : UIViewController, UITableViewDelegate, UITableVi
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/YYYY @ HH:mm"
-        tableViewCell.newsDate?.text = dateFormatter.string(from: (rssItem.pubDate)!)
+        if rssItem.pubDate != nil {
+            tableViewCell.newsDate?.text = dateFormatter.string(from: (rssItem.pubDate)!)
+        } else {
+            tableViewCell.newsDate?.text = ""
+        }
         
         tableViewCell.newsSource?.text = rssFeed?.title
         tableViewCell.newsTitle?.text = rssItem.title
