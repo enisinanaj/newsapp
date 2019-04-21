@@ -8,6 +8,7 @@ target 'assicurazione-story' do
   # Pods for assicurazione-story
   pod 'Alamofire', '~> 4.4'
   pod "AlamofireRSSParser"
+  pod 'Google-Mobile-Ads-SDK'
 
   target 'assicurazione-storyTests' do
     inherit! :search_paths

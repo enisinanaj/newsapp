@@ -8,7 +8,7 @@
 
 import AlamofireRSSParser
 
-class CommonNewsSourceProtocol: NewsSourceProtocol {
+class CommonNewsSourceProtocol: NewsSourceProtocol {    
     
     let NEWS_SOURCE_URL: String = "";
     
@@ -52,4 +52,7 @@ class CommonNewsSourceProtocol: NewsSourceProtocol {
         return ""
     }
     
+    func getBackgroundColor() -> (start: CGColor, end: CGColor) {
+        return (start: UIColor(0xCF000F).cgColor, end: UIColor(0xE3000E).cgColor)
+    }
 }

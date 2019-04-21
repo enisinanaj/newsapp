@@ -15,7 +15,7 @@ class InsurancePost: CommonNewsSourceProtocol {
     }
     
     override func getNewsSource() -> String {
-        return "https://www.postonline.co.uk/feeds/rss/category/europe/italy"
+        return "https://www.postonline.co.uk/feeds/rss/category/technology"
     }
     
     override func getBackgroundImageUrl() -> String {
@@ -23,6 +23,10 @@ class InsurancePost: CommonNewsSourceProtocol {
     }
     
     override func getNewsSourceTitle() -> String {
-        return "INSURANCE POST";
+        return "INSURANCE POST Tech";
+    }
+    
+    override func getBackgroundColor() -> (start: CGColor, end: CGColor) {
+        return (start: UIColor(0xCF000F).cgColor, end: UIColor(0xE3000E).cgColor)
     }
 }

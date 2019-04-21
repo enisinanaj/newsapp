@@ -8,6 +8,7 @@
 
 import UIKit
 import AlamofireRSSParser
+import GoogleMobileAds
 
 class NewsDetailViewController: UIViewController {
     
@@ -17,6 +18,8 @@ class NewsDetailViewController: UIViewController {
     @IBOutlet weak var sourceName: UILabel!
     @IBOutlet weak var newsBody: UILabel!
     @IBOutlet weak var articleTitle: UILabel!
+    
+    var bannerView: GADBannerView!
 
     
     var sourceTitle: String?
@@ -28,8 +31,35 @@ class NewsDetailViewController: UIViewController {
         
         self.title = rssItem?.title
         self.articleTitle.text = rssItem?.title
+        
+        bannerView = GADBannerView(adSize: kGADAdSizeLargeBanner)
+        bannerView.rootViewController = self
+        bannerView.adUnitID = "ca-app-pub-6514681921761516/1080959563"
+        bannerView.load(GADRequest())
+        
+        addBannerViewToView(bannerView)
     }
     
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(bannerView)
+        self.view.addConstraints(
+            [NSLayoutConstraint(item: bannerView,
+                                attribute: .bottom,
+                                relatedBy: .equal,
+                                toItem: self.bottomLayoutGuide,
+                                attribute: .top,
+                                multiplier: 1,
+                                constant: 0),
+             NSLayoutConstraint(item: bannerView,
+                                attribute: .centerX,
+                                relatedBy: .equal,
+                                toItem: self.view,
+                                attribute: .centerX,
+                                multiplier: 1,
+                                constant: 0)
+            ])
+    }
     
     @IBAction func onOriginalArticleRequest(_ sender: Any) {
         UIApplication.shared.open(URL(string: (rssItem?.link)!)!, options: [:], completionHandler: {

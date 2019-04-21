@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XcX-tp-MTS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XcX-tp-MTS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +15,7 @@
             <objects>
                 <navigationController id="XcX-tp-MTS" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" backIndicatorImage="Chevron-Back" largeTitles="YES" backIndicatorTransitionMaskImage="Chevron-Back" id="V0t-IJ-f6u">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.99281746709999996" green="1" blue="0.9825371503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -34,7 +33,7 @@
             </objects>
             <point key="canvasLocation" x="124" y="740"/>
         </scene>
-        <!--FONTI DI NOTIZIE-->
+        <!--NEWS SOURCES-->
         <scene sceneID="V4w-gi-Buw">
             <objects>
                 <tableViewController id="a7b-fG-L3Z" customClass="NewsSourcesViewController" customModule="assicurazione_story" customModuleProvider="target" sceneMemberID="viewController">
@@ -51,7 +50,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="newsSourceImage" translatesAutoresizingMaskIntoConstraints="NO" id="eey-gd-kTr" userLabel="NewsSourceImage">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="184.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                                         </imageView>
                                         <view contentMode="scaleToFill" restorationIdentifier="newsSourceGradientBackground" translatesAutoresizingMaskIntoConstraints="NO" id="zpG-9X-6oU" userLabel="NewsSourceGradientBackground" customClass="GradientView" customModule="assicurazione_story" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="184.5"/>
@@ -61,13 +60,13 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LargerSourceName" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XN2-57-vBj">
-                                            <rect key="frame" x="70" y="35" width="898.5" height="185"/>
+                                            <rect key="frame" x="70" y="35" width="898.5" height="140"/>
                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="117"/>
                                             <color key="textColor" white="1" alpha="0.29219850352112675" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="newsSourceTitle" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pL2-Pb-xL3" userLabel="NewsSourceTitle">
-                                            <rect key="frame" x="10" y="147" width="355" height="27.5"/>
+                                            <rect key="frame" x="10" y="102.5" width="355" height="27.5"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
                                             <color key="textColor" red="0.97083141365688197" green="1" blue="0.9559238798943569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -104,7 +103,7 @@
                             <outlet property="delegate" destination="a7b-fG-L3Z" id="viD-Fu-7gO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="FONTI DI NOTIZIE" id="TwQ-9M-kDt"/>
+                    <navigationItem key="navigationItem" title="NEWS SOURCES" id="TwQ-9M-kDt"/>
                     <connections>
                         <outlet property="tableView" destination="0AB-3t-S5A" id="qcc-Ml-DmJ"/>
                     </connections>
@@ -118,7 +117,7 @@
             <objects>
                 <viewController id="XQP-15-32N" customClass="NewsDetailViewController" customModule="assicurazione_story" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zHL-9X-ImS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3Z-A0-jRH">
@@ -147,7 +146,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfr-Fc-lUX">
                                 <rect key="frame" x="10" y="189" width="355" height="30"/>
-                                <state key="normal" title="Articolo originale">
+                                <state key="normal" title="Original article">
                                     <color key="titleColor" red="0.74052784969999996" green="0.052746795139999997" blue="0.039405964049999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -186,16 +185,16 @@
             </objects>
             <point key="canvasLocation" x="1040.8" y="1487.4062968515743"/>
         </scene>
-        <!--LE UTLIME-->
+        <!--LATEST-->
         <scene sceneID="ezX-AJ-EIJ">
             <objects>
-                <viewController title="LE UTLIME" modalTransitionStyle="flipHorizontal" id="6Ez-9i-rlr" customClass="NewsTableViewController" customModule="assicurazione_story" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="LATEST" modalTransitionStyle="flipHorizontal" id="6Ez-9i-rlr" customClass="NewsTableViewController" customModule="assicurazione_story" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EiO-Ks-XtO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorInsetReference="fromAutomaticInsets" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jCz-bc-SG8">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -221,22 +220,22 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="newsTitle" text="Opzioni Binarie e regolamenti internazionali: facciamo chiarezza" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0s-3R-1bc" userLabel="CellNewsTitle">
-                                                    <rect key="frame" x="10" y="46" width="355" height="31.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" restorationIdentifier="newsTitle" text="Opzioni Binarie e regolamenti internazionali: facciamo chiarezza" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0s-3R-1bc" userLabel="CellNewsTitle">
+                                                    <rect key="frame" x="10" y="46" width="355" height="56.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="newsExcerpt" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Det-nl-NdP" userLabel="CellNewsExcerpt">
-                                                    <rect key="frame" x="10" y="87.5" width="355" height="72"/>
+                                                    <rect key="frame" x="10" y="112.5" width="355" height="72"/>
                                                     <string key="text">Il mondo delle opzioni binarie si configura talvolta come una giungla di broker, portali, notizie contrastanti e ambigue. Di chi ci si può fidare? Quali broker sono più affidabili?</string>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="newsReadMore" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKo-Z0-5DY" userLabel="CellNewsReadMore" customClass="NewsReadMoreButton" customModule="assicurazione_story" customModuleProvider="target">
-                                                    <rect key="frame" x="10" y="169.5" width="62" height="55"/>
-                                                    <state key="normal" title="Continua">
+                                                    <rect key="frame" x="10" y="194.5" width="87" height="30"/>
+                                                    <state key="normal" title="Read more...">
                                                         <color key="titleColor" red="0.74052784974093266" green="0.052746795136486807" blue="0.039405964046160549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>

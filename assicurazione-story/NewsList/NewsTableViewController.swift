@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import AlamofireRSSParser
+import GoogleMobileAds
 
 class NewsTableViewController : UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -26,6 +27,7 @@ class NewsTableViewController : UIViewController, UITableViewDelegate, UITableVi
         
         for (index, _) in (rssItems?.enumerated())! {
             let indexPath = NSIndexPath(row: index, section: 0)
+            
             self.tableView.insertRows(at: [indexPath as IndexPath], with: UITableViewRowAnimation.bottom)
         }
         
@@ -56,6 +58,7 @@ class NewsTableViewController : UIViewController, UITableViewDelegate, UITableVi
         
         return (self.rssItems?.count)!
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tableViewCell : NewsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "newsRow", for: indexPath) as! NewsTableViewCell

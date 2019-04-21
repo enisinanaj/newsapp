@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class NewsSourceCell: UITableViewCell {
     @IBOutlet weak var sourceImage: UIImageView!
@@ -17,20 +18,15 @@ class NewsSourceCell: UITableViewCell {
     var newsSourceInstance: NewsSourceProtocol?
 }
 
-var ColorsArray = [
-    (start: UIColor(0xCF000F).cgColor, end: UIColor(0xE3000E).cgColor),
-    (start: UIColor(0x7E3661).cgColor, end: UIColor(0x953163).cgColor),
-    (start: UIColor(0xF04903).cgColor, end: UIColor(0xFD5B03).cgColor),
-    (start: UIColor(0x00587A).cgColor, end: UIColor(0x008891).cgColor),
-    (start: UIColor(0xBF4A67).cgColor, end: UIColor(0xE6567A).cgColor)]
-
 class NewsSourcesViewController : UITableViewController {
-    let newsSources = [NewsSourceType.MONDO_ASSICURAZIONI, NewsSourceType.GENERALI, NewsSourceType.IVASS, NewsSourceType.INSURANCE_POST, NewsSourceType.FINANZA_COM]
+    let newsSources = [NewsSourceType.PEW_RESEARCH_CENTER, NewsSourceType.HUFF_WORLD_NEWS, NewsSourceType.AD, NewsSourceType.HUFF_POLITICS, NewsSourceType.TIME_WORLD, NewsSourceType.THE_WALL_STREET_JOURNAL, NewsSourceType.AD, NewsSourceType.BBC_NEWS, NewsSourceType.INSURANCE_POST, NewsSourceType.TIME_SCIENCE, NewsSourceType.AD, NewsSourceType.INSURANCE_POST_REGULATION, NewsSourceType.REUTERS_WORLD_NEWS, NewsSourceType.INSURANCE_POST_RISK_MANAGEMENT, NewsSourceType.AD]
     
     var selectedNewsLoaded: Bool = false
     
     override func viewDidLoad() {
+        
         selectedNewsLoaded = false
+        self.tableView.register(UINib(nibName: "AdTableViewCell", bundle: nil), forCellReuseIdentifier: "advertCell")
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -56,21 +52,42 @@ class NewsSourcesViewController : UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if (newsSources[indexPath.row] == NewsSourceType.AD ) {
+            let tableViewCell : AdTableViewCell = tableView.dequeueReusableCell(withIdentifier: "advertCell", for: indexPath) as! AdTableViewCell
+            
+            let bannerView = GADBannerView(adSize: kGADAdSizeLargeBanner)
+            bannerView.adUnitID = "ca-app-pub-6514681921761516/7732684748"
+            bannerView.rootViewController = self
+            bannerView.load(GADRequest())
+            tableViewCell.addBannerViewToView(bannerView)
+            
+            return tableViewCell
+        }
+        
         let newsSourceCell : NewsSourceCell = tableView.dequeueReusableCell(withIdentifier: "newsSourceRow", for: indexPath) as! NewsSourceCell
         
-        let newsSource: NewsSourceProtocol = NewsSourcesFactory.create(sourceType: newsSources[indexPath.row])
+        let newsSource: NewsSourceProtocol = NewsSourcesFactory.create(sourceType: newsSources[indexPath.row])!
         newsSourceCell.sourceTitle.text = newsSource.getNewsSourceTitle()
         newsSourceCell.newsSourceInstance = newsSource
         
         // let transparency: UIColor = UIColor(displayP3Red: 1, green: 1, blue: 1, alpha: 0)
         // let black: UIColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.4)
         
-        let tuple = ColorsArray[indexPath.row]
+        let tuple = newsSource.getBackgroundColor()
         newsSourceCell.sourceGradient.gradientLayer.colors = [tuple.start, tuple.end]
         newsSourceCell.sourceGradient.gradientLayer.gradient = GradientPoint.bottomRightTopLeft.draw()
         newsSourceCell.largeSourceName.text = newsSource.getNewsSourceTitle()
         
         return newsSourceCell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if (newsSources[indexPath.row] == NewsSourceType.AD ) {
+            return 100
+        }
+
+        return 140
     }
     
 }
